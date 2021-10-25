@@ -28,7 +28,7 @@ vocab_file = './data/vocab.pkl'
 inv_vocab_file = './data/inv_vocab.pkl'
 ```
 * Run file ```chatbot.py```
-
+![image](https://user-images.githubusercontent.com/93110117/138664370-e34bf272-101b-4a6d-97f0-eea3842ab401.png)
 
 Run Chatbot with Web Interface
 ====================
@@ -36,4 +36,5 @@ Run Chatbot with Web Interface
 ```
 python -m flask run
 ```
-* Link: http://127.0.0.1:5000
+![image](https://user-images.githubusercontent.com/93110117/138663840-56690fd2-bc97-4899-ad93-8f6057cd9509.png)
+
