@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crush ( ˘ ³˘)♥ ( ˘ ³˘)♥ ( ˘ ³˘)♥ </title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='chatBot.css')}}">
+    <link rel="stylesheet" href="/static/chatBot.css">
+    <link rel="shortcut icon" href="/static/logo.png" type="image/x-icon">
+    <style></style>
+</head>
+<body>
+    <div class="chatBot">
+        <div class="chatBotHeading">
+            <label for="chatTextBox" id="chatOpenTrigger" class="">Any Queries? Ask Me!</label>
+        </div>
+        <hr class="">
+        <div class="chatBody">
+            <div class="chatSession" id="sessionChat">
+            </div>
+        </div>
+        <form class="chatForm" autocomplete="off">
+            <div class="typingArea">
+                <textarea name="chatInput" id="chatTextBox" class="textArea" onblur="if(!validateMessage()) this.value = 'Type here...'" onfocus="if(!validateMessage()) this.value = ''"
+                    onkeydown = "if (event.keyCode == 13){
+                                        document.getElementById('sendButton').click();
+                                        event.preventDefault();
+                                        ButtonClicked = false;}"></textarea>
+                <button type="submit" class="sendButton" id="sendButton"><img src="/static/send.svg" alt="Send" srcset=""></button>
+            </div>
+            <button type="button" id="chatCloseTrigger">Close Chat!</button>
+        </form>
+    </div>
+    <!-- JavaScripts from native directory -->
+    <script src="{{url_for('static', filename='chatBotConversation.js')}}"></script>
+    <script src="{{url_for('static', filename='chatBotValidate.js')}}"></script>
+    <script src="{{url_for('static', filename='chatBotAnimate.js')}}"></script>
+</body>
+</html>
